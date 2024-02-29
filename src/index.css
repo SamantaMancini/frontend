@@ -6,3 +6,50 @@
 .checkbox:checked + .label .ball {
     transform: translateX(24px);
   }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+  @media (max-width: 640px) {
+    #mobile-menu.open {
+      display: block;
+      animation: slideDown 0.5s ease-in-out;
+    }
+  
+    #mobile-menu.close {
+      display: none;
+      animation: slideUp 0.5s ease-in-out;
+    }
+  }
+#desktop-menu {
+  display: none;
+}
+  @media (min-width: 640px) {
+    #desktop-menu.open {
+      display: block;
+      animation: slideDown 0.5s ease-in-out;
+    }
+    #desktop-menu.close {
+      display: block;
+      animation: slideUp 0.5s ease-in-out;
+    }
+  }
+ 
