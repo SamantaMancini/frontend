@@ -2,9 +2,10 @@ import React from 'react'
 
 const Footer = ({ contextTheme }) => {
   return (
-    <div className='text-center bottom-0 flex justify-center items-center p-2 w-full fixed '>
+    <footer className='relative text-center p-2 w-full'>
+    <p>&nbsp;</p>
     <p className={contextTheme === "dark" ? "text-white" : "text-gray-800"}>Copyright &copy; {new Date().getFullYear()} Samanta Mancini</p>
-    </div>
+    </footer>
   )
 }
 

@@ -27,13 +27,14 @@ function App() {
     <NavbarComponent handleSwitch={handleSwitch} checked={checked}/>
     
     <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="statistics" element={<Statitics />}/>
+      <Route path="/" element={<Home contextTheme={contextTheme}/>}/>
+      <Route path="statistics" element={<Statitics contextTheme={contextTheme} />}/>
       <Route path="community" element={<Community />}/>
       <Route path="*" element={<NoPage />}/>
     </Routes>
-
+    <div className="absolute bottom-0 flex justify-center items-center">
     <Footer contextTheme={contextTheme}/>
+    </div>
   </div>
   )
 }
